@@ -18,11 +18,7 @@ class GetTasksAction
                 $filters->completed,
                 fn ($query) => $query->where('is_completed', true)
             )
-            ->when(
-                $filters->paginate === false,
-                fn ($query) => $query->get(),
-                fn ($query) => $query->paginate()->withQueryString()
-            );
+            ->get();
     }
 }
 

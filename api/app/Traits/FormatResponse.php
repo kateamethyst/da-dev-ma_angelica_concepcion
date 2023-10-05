@@ -53,7 +53,7 @@ trait FormatResponse
         }
 
         $response = [
-            ...$resource->response()->getData(true),
+            'data' => $resource,
             ...$additional
         ];
 

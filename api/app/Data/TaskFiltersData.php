@@ -8,7 +8,6 @@ class TaskFiltersData extends Data
 {
     public function __construct(
         public ?bool $completed = false,
-        public ?bool $paginate = true,
     ) {
     }
 
@@ -16,7 +15,6 @@ class TaskFiltersData extends Data
     {
         return new static(
             completed: $request->boolean('completed'),
-            paginate: $request->input('paginate', true),
         );
     }
 }
