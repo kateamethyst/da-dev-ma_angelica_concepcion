@@ -5,7 +5,7 @@ type Props = {
   onSubmit: () => void;
 };
 
-export const TodoInputText = ({onSubmit}: Props) => {
+export const TodoInputText = ( { onSubmit } : Props ) => {
 
   const [todo, setTodo] = useState<string>('');
 

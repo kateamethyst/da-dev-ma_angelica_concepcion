@@ -8,7 +8,7 @@ type Props = {
   fetchTodoList: () => void;
 }
 
-export const List = ({todos, title, fetchTodoList}: Props) => {
+export const List = ( { todos, title, fetchTodoList }: Props ) => {
   return (
     <>
       <p className='font-bold text-xl pb-8 text-gray-600 capitalize'>{title} ({todos.length})</p>

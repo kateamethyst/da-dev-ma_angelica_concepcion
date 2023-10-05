@@ -7,11 +7,7 @@ type Props = {
   refresh: () => void;
 }
 
-const Item = ({todo, refresh}: Props) => {
-  useEffect( () => {
-    console.log('rendered')
-  }, []);
-
+const Item = ( { todo, refresh } : Props ) => {
   const handleOnRemove = async () => {
     await removeTodoList(todo.id);
     refresh();
