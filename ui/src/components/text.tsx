@@ -14,7 +14,7 @@ export const TodoInputText = ({onSubmit}: Props) => {
   };
 
   const handleOnKeydown = async (event: any) => {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && todo.trim() !== '') {
       await addTodoList({description: todo, isCompleted: false});
       setTodo('');
       onSubmit()
