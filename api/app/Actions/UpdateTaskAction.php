@@ -13,7 +13,7 @@ class UpdateTaskAction
     public function __invoke(Task $task, TaskData $data): Task
     {
         Task::query()->where('id', $task->id)->update([
-            'description' => $data->description,
+            'description' => $data->description ? $data->description : $task->description,
             'is_completed' => $data->isCompleted
         ]);
 

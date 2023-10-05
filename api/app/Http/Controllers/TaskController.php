@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreTaskRequest;
-use App\Http\Request\UpdateTaskRequest;
+use App\Http\Requests\UpdateTaskRequest;
 use App\Models\Task;
 use App\Actions\GetTasksAction;
 use App\Actions\CreateTaskAction;
